@@ -1,14 +1,389 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
     <head>
-        <title>Jorge LS Le�o</title>
-        <meta charset="UTF-8">
-        <!-- meta name="viewport" content="width=device-width, initial-scale=1.0" -->
-		<link href='https://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
-	</head>
-	
-	<body>
-	<h1>Em breve...</h1>
-	</body>
+        <title>CPE 726 - Tópicos Especiais em Inferência em Grafos</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href='http://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'>
+
+        <style type="text/css">
+            body{
+                font-size:18pt;
+                /*				font-family:arial; */
+                /*				font-family: 'Fjord One', serif; */
+                font-family: 'Amaranth', serif;
+            }
+            .thinBorder{
+                border-collapse : collapse;
+                width : 1000px;
+            }
+            .thinBorder tr td{
+                border: 1px solid black;
+                text-align:center;
+            }
+            .thinBorder tr td+td+td{
+                border: 1px solid black;
+                text-align:center;
+            }
+            .thinBorder tr td+td+td+td{
+                border: 1px solid black;
+                text-align:left;
+            }
+            .secondtd{
+                text-align:center;
+            }
+            .red_font{
+                color:red;
+                font-weight:bold;
+            }
+        </style>
+
+
+    </head>
+
+    <body bgcolor="#ffffff">
+        <center>
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="./Thomas_Bayes.gif" width=180 alt="">
+                        </td>
+                        <td width="20"></td>
+                        <td align="center">
+                            <font size="+2"><b>CPE 726- 2017/2<br>Tópicos Especiais em Inferência em Grafos</b>
+                                <br>Curso de posgraduação em<br>
+                                Engenharia Elétrica<br>
+                                do PEE / COPPE / UFRJ
+                                <br>
+                                <b><a href="http://www.lpc.ufrj.br/%7Eleao">Prof. Jorge Lopes de Souza Leão</a></b>
+                                <br>
+                                <b>3<sup>as</sup> e 5<sup>as</sup> feiras, das 13:00h às 15:00h, sala H-312 D</b>
+                            </font>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <center><hr>
+                <table border="0" width="1200" align="center">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <font color="#0000bb"><b>Últimas modificações:</b></font><br>
+                                <table>
+                                    <tr><td>
+                                            <a href="#INTRODUCAO" style="color:blue">1. Introdução:</a>
+                                            <font color="#000000"><b>22 de junho de 2017</b></font></td>
+                                    <tr><td>
+                                            <a href="#DIARIO" style="color:blue">2. Diário:</a>
+                                            <font color="#FF0000"><b>25 de junho de 2017</b></font></td>
+                                    <tr><td>
+                                            <a href="#AVALIACAO" style="color:blue">3. Avaliação:</a>
+                                            <font color="#000000"><b>22 de junho de 2017</b></font></td>
+                                    <tr><td>
+                                            <a href="#NAULA" style="color:blue">4. Notas de aula <i>et alia</i>:</a>
+                                            <font color="#000000"><b>22 de junho de 2017</b></font></td>
+                                    <tr><td>
+                                            <a href="#BIBLIO" style="color:blue">5. Bibliografia:</a>
+                                            <font color="#000000"><b>22 de junho de 2017</b></font></td>
+                                </table>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="INTRODUCAO"><b>1. Introdução:</b></a>
+                                <ul>
+                                    <li><b>Prerequisitos ou desejável:</b><br>
+                                        Lógica matemática e cálculo.
+                                    </li>
+                                    <li><b>Ementa (proposta):</b><br>
+                                        26 aulas (52 horas-aula) previstas, incluídas aulas de avaliação e feriados.<br>
+                                        Revisão de probabilidades, Inferência Bayesiana,
+                                        Redes de Markov e redes Bayesianas,
+                                        atualização da crença por propagação em rede,
+                                        revisão distribuída de crenças compostas, decisão e controle.
+                                    </li>
+                                </ul>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="DIARIO"><b>2. Diário:</b></a>
+                                <br>
+                                <br>
+                                <table class="thinBorder" id="diario" align="center">
+                                    <tbody><tr>
+                                            <td class="zerotd" bgcolor="#00eeff" width="40">&nbsp;</td>
+                                            <td class="firsttd" bgcolor="#00eeff" width="80"><b>DATA</b></td>
+                                            <td class="secondtd" bgcolor="#00eeff" width="80"><b>Dia da semana</b></td>
+                                            <td bgcolor="#00eeff" width="795"><b>&nbsp;DESCRIÇÃO</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>13/jun</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+											Revisão de probabilidades: sigma álgebras, medidas.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>15/jun</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+											Variáveis aleatórias.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>20/jun</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>22/jun</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>27/jun</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>29/jun</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>18/out</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>06/jul</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>11/jul</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>13/jul</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>18/jul</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>20/jul</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>25/jul</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>27/jul</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>01/ago</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>03/ago</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>08/ago</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>10/ago</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td>15/ago</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>17/ago</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>21</td>
+                                            <td>22/ago</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22</td>
+                                            <td>24/ago</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>23</td>
+                                            <td>20/ago</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>24</td>
+                                            <td>31/ago</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>05/set</td>
+                                            <td>3<sup>a</sup></td>
+                                            <td>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>26</td>
+                                            <td>07/set</td>
+                                            <td>5<sup>a</sup></td>
+                                            <td>
+											<span style="color:red;">Feriado: Proclamação da Independência.</span>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="AVALIACAO"><b>3. Avaliação:</b></a>
+                                <br>
+                                A avaliação será feita com base em três trabalhos e/ou provas.<br><br>
+
+							</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="NAULA"><b>4. Notas de aula, livro-texto <i>et alia</i>:</b></a>
+                                <ul>
+                                    <li><a href="./Probabilidade_e_inferencia_Leao.docx">Probabilidade_e_inferencia_Leao.docx</a></li>
+									<li>Kevin B. Korb, Ann E. Nicholson, "Bayesian artificial intelligence", Chapman & Hall/CRC Press LLC, 2004.</li>
+                                </ul>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="BIBLIO"><b>5. Bibliografia:</b></a>
+                                <br>
+                                <br>[WLO] Wlodzimierz Bryc - "Applied probability and stochastic processes", Cinncinnati Free Texts, 1995.
+                                <br>[PEA1] Judea Pearl - "Probabilistic reasoning in intelligent systems: networks of plausible inference", second edition, Morgan Kaufmann Publishers Inc, 1988.
+                                <br>[PEA2] Judea Pearl - "Causality Models, Reasoning, and Inference". Cambridge University Press. 2nd Edition, 2009.
+                                <br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <img src="footer-line-smaller.png" alt=""/>
+            </center>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br>
+        </center>
+    </body>
 </html>
