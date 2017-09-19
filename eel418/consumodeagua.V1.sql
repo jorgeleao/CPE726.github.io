@@ -4,7 +4,7 @@
 
 -- Dumped from database version 9.4.10
 -- Dumped by pg_dump version 9.4.10
--- Started on 2017-09-15 21:19:18
+-- Started on 2017-09-19 01:00:01
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -13,9 +13,9 @@ SET standard_conforming_strings = on;
 SET check_function_bodies = false;
 SET client_min_messages = warning;
 
-DROP DATABASE IF EXISTS consumodeagua;
+DROP DATABASE consumodeagua;
 --
--- TOC entry 2008 (class 1262 OID 39196)
+-- TOC entry 2005 (class 1262 OID 39196)
 -- Name: consumodeagua; Type: DATABASE; Schema: -; Owner: postgres
 --
 
@@ -42,7 +42,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- TOC entry 2011 (class 0 OID 0)
+-- TOC entry 2008 (class 0 OID 0)
 -- Dependencies: 1
 -- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
 --
@@ -64,7 +64,8 @@ SET default_with_oids = false;
 CREATE TABLE condominos (
     apto character varying(4) NOT NULL,
     responsavel text,
-    telefone character varying(25)
+    telefone character varying(25),
+    email text
 );
 
 
@@ -79,7 +80,12 @@ CREATE TABLE medidas (
     apto character varying(4),
     datahora timestamp without time zone,
     nropulsos integer,
-    serialmedidas integer NOT NULL
+    serialmedidas integer NOT NULL,
+    hidrometro integer,
+    m3noperiodo real,
+    nropulsosacumulados integer,
+    m3acumulados real,
+    custoacumulado real
 );
 
 
@@ -101,7 +107,7 @@ CREATE SEQUENCE medidas_serialmedidas_seq
 ALTER TABLE medidas_serialmedidas_seq OWNER TO postgres;
 
 --
--- TOC entry 2012 (class 0 OID 0)
+-- TOC entry 2009 (class 0 OID 0)
 -- Dependencies: 174
 -- Name: medidas_serialmedidas_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
 --
@@ -115,33 +121,6 @@ ALTER SEQUENCE medidas_serialmedidas_seq OWNED BY medidas.serialmedidas;
 --
 
 ALTER TABLE ONLY medidas ALTER COLUMN serialmedidas SET DEFAULT nextval('medidas_serialmedidas_seq'::regclass);
-
-
---
--- TOC entry 2001 (class 0 OID 39197)
--- Dependencies: 173
--- Data for Name: condominos; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO condominos VALUES ('101', 'José das Couves', '+55(21)99999-1234');
-
-
---
--- TOC entry 2003 (class 0 OID 39207)
--- Dependencies: 175
--- Data for Name: medidas; Type: TABLE DATA; Schema: public; Owner: postgres
---
-
-INSERT INTO medidas VALUES ('101', '2017-09-15 10:10:00', 300, 1);
-
-
---
--- TOC entry 2013 (class 0 OID 0)
--- Dependencies: 174
--- Name: medidas_serialmedidas_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
---
-
-SELECT pg_catalog.setval('medidas_serialmedidas_seq', 1, true);
 
 
 --
@@ -172,7 +151,7 @@ ALTER TABLE ONLY medidas
 
 
 --
--- TOC entry 2010 (class 0 OID 0)
+-- TOC entry 2007 (class 0 OID 0)
 -- Dependencies: 7
 -- Name: public; Type: ACL; Schema: -; Owner: postgres
 --
@@ -183,7 +162,7 @@ GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
--- Completed on 2017-09-15 21:19:19
+-- Completed on 2017-09-19 01:00:01
 
 --
 -- PostgreSQL database dump complete
