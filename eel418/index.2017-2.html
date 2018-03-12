@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>EEL 418 - PROGRAMAÇÃO AVANÇADA</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <style type="text/css">
+            body{
+                font-size:18pt;
+            }
+            .thinBorder{
+                border-collapse : collapse;
+                width : 1000px;
+            }
+            .thinBorder tr td{
+                border: 1px solid black;
+                text-align:center;
+            }
+            .thinBorder tr td+td+td{
+                border: 1px solid black;
+                text-align:center;
+            }
+            .thinBorder tr td+td+td+td{
+                border: 1px solid black;
+                text-align:left;
+            }
+            .secondtd{
+                text-align:center;
+            }
+            .red_font{
+                color:red;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+
+    <body bgcolor="#ffffff">
+        <center>
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="./java.gif" alt="">
+                        </td>
+                        <td width="20"></td>
+                        <td align="center">
+                            <font size="+2"><b>EEL 418 - 2017/2<br>Programação avançada</b>
+                                <br>Cursos de graduação em<br>
+                                Engenharia Eletrônica e de Computação (EL1)<br>
+                                e em<br>
+                                Engenharia de Computação e Informação (ECI)<br>
+                                do DEL / POLI / UFRJ
+                                <br>
+                                <b><a href="https://jorgeleao.github.io/">Prof. Jorge Lopes de Souza Leão</a></b>
+                                <br>
+                                <b>2<sup>as</sup> e 6<sup>as</sup> feiras, das 13:00h às 15:00h, sala H-215 A</b>
+                            </font>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <center>
+                    Verifique as datas de atualização de cada seção
+		<hr>
+                <table border="0" width="1200" align="center">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <font color="#0000bb"><b>Últimas modificações:</b></font><br>
+                                <table>
+                                    <tr><td>
+                                            <a href="#INTRODUCAO" style="color:blue">1. Introdução:</a>
+                                            <font color="#000000"><b>14 de agosto de 2017</b></font></td>
+                                    <tr><td>
+                                            <a href="#DIARIO" style="color:blue">2. Diário:</a>
+                                            <font color="#ff0000"><b>08 de dezembro de 2017</b></font></td>
+                                    <tr><td>
+                                            <a href="#AVALIACAO" style="color:blue">3. Avaliação:</a>
+                                            <font color="#000000"><b>14 de agosto de 2017</b></font></td>
+                                    <tr><td>
+                                            <a href="#NAULA" style="color:blue">4. Notas de aula <i>et alia</i>:</a>
+                                            <font color="#000000"><b>14 de agosto de 2017</b></font></td>
+                                    <tr><td>
+                                            <a href="#BIBLIO" style="color:blue">5. Bibliografia:</a>
+                                            <font color="#000000"><b>14 de agosto de 2017</b></font></td>
+                                </table>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="INTRODUCAO"><b>1. Introdução:</b></a>
+                                <ul>
+                                    <li><b>Prerequisitos ou desejável:</b><br>
+                                        C++, Sistemas Operacionais, redes TCP/IP, BD & SQL.
+                                    </li>
+                                    <li><b>Ementa (proposta):</b><br>
+                                        A história de Java, compilação e execução, pacotes,
+										a biblioteca básica de Java, multitarefa, arquivos (streams),
+										soquetes e rede, cliente-servidor, o protocolo HTTP, o servidor Tomcat,
+										servlets, sessão, atributos, páginas JSP, HTML/CSS/Javascript,
+                                        modelo 1 e modelo 2 (MVC) de aplicações web, tags customizadas, JSTL,
+                                        bases de dados e JDBC, Javascript, DOM, JSON, AJAX, jQuery,
+                                        formulários multipart e subida de arquivos, REST, Websockets.
+                                    </li>
+                                </ul>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>2. Diário:</b>
+                                <br>
+                                <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    Calendário com 38 dias, (até 76 horas-aula), das quais até 6 aulas de avaliação e feriados (5).
+                                    <br>
+                                    <br>
+                                <table class="thinBorder" id="diario" align="center">
+                                    <tbody><tr>
+                                            <td class="zerotd" bgcolor="#00eeff" width="40">&nbsp;</td>
+                                            <td class="firsttd" bgcolor="#00eeff" width="80"><b>DATA</b></td>
+                                            <td class="secondtd" bgcolor="#00eeff" width="80"><b>Dia da semana</b></td>
+                                            <td bgcolor="#00eeff" width="795"><b>&nbsp;DESCRIÇÃO</b></td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>31/jul</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <a href="./Main.java">Exemplo</a> de compilação e execução por linha de comando (shell).    
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>04/ago</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                <a href="./Instalacao.do.JDK.Netbeans.pdf">Instruções</a> para instalar o JDK e o Netbeans.<br>
+                                                <a href="./primeirocomide.rar">primeirocomide.rar</a><br>
+                                                <a href="./WebApplication1.rar">WebApplication1.rar</a><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>07/ago</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Aula suspensa.</span>
+                                                <br>
+                                                <span style="color:red;">10/ago: Último dia para alterar inscrição em disciplina.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>11/ago</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                Exemplo do uso de threads: <a href="./exemploThreads01.rar">exemploThreads01.rar</a>
+                                                <br>
+                                                Exemplo do uso de entrada/saída e codificação de caracteres:
+                                                <a href="./entrada_saida01.rar">entrada_saida01.rar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>14/ago</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Aula suspensa.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>18/ago</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                Resumo de redes TCP/IP: <a href="./Internet02.pdf">Internet02.pdf</a>
+                                                <br>
+                                                Esquema da comunicação cliente-servidor: <a href="./cliente-servidor-tcp.pdf">cliente-servidor-tcp.pdf</a>
+                                                <br>
+                                                Exemplo do uso de soquetes (TCP/IP): <a href="./clienteservidorsequencial.rar">clienteservidorsequencial.rar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>21/ago</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Aula suspensa.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>25/ago</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                Segundo exemplo do uso de soquetes (TCP/IP): <a href="./clienteservidorconcorrente.rar">clienteservidorconcorrente.rar</a>
+                                                <br>
+                                                Exemplo 1 (muito simplificado) de cliente-servidor HTTP:
+                                                <a href="./HttpClientServer01.rar">HttpClientServer01.rar</a>
+                                                <br>
+                                                Exemplo 2 (muito simplificado) de cliente-servidor HTTP:
+                                                <a href="./HttpClientServer02.rar">HttpClientServer02.rar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>28/ago</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                O servidor, hospedeiro de servlets, Apache-Tomcat:
+                                                <a href="./TOMCAT.pdf">TOMCAT.pdf</a>
+                                                <br>
+                                                Primeiro exemplo de servlets: 
+                                                <a href="./projeto28agosto.rar">projeto28agosto.rar</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>01/set</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Aula suspensa.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>04/set</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <a href="./ArquiteturaMVC.pdf">ArquiteturaMVC.pdf</a>
+                                                <br>
+                                                Exemplo de aplicação MVC baseada em páginas, sem uso de Tags JSP (só com scriptlets): 
+                                                <a href="./mvc_paginas_SEM_tags.rar">mvc_paginas_SEM_tags.rar</a>
+                                                <br>
+                                                Exemplo de aplicação MVC baseada em páginas, com uso de Tags JSP: 
+                                                <a href="./mvc_paginas_COM_tags.rar">mvc_paginas_COM_tags.rar</a>
+                                                <br>
+                                                <a href="./jstl-quick-reference.pdf">jstl-quick-reference.pdf</a><br>
+                                                <a href="./jspELlanguage-refcardz.pdf">jspELlanguage-refcardz.pdf</a><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>08/set</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Recesso</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>11/set</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                Instruções para a instalação do gerenciador de bases de dados:
+                                                <a href="instrucoesPostgreSQL_2017-1.pdf">instrucoesPostgreSQL_2017-1.pdf</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>15/set</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+												Exemplo de uso de uma base de dados: <a href="./database20_2017_1.rar">database20_2017_1.rar</a><br>
+												Exemplo de app WEB com uso de uma base de dados: <a href="./databaseWEB_2017_1.rar">databaseWEB_2017_1.rar</a><br>
+                                                <br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./enunciado_primeiro_trabalho.pdf"
+                                                   style="font-weight:bold;color:red;">Enunciado do primeiro trabalho.pdf</a>
+                                                <br>   
+                                                <br>
+												Base de dados que todos devem usar: <a href="./consumodeagua.V1.sql">consumodeagua.V1.sql</a> <span style="color:red;">(alterada 18/set/2017)</span>	
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>18/set</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+												Demonstração/sugestão para o primeiro trabalho (código mostrado e comentado na aula):
+												<br>- <a href="./login.png">login</a>
+												<br>- <a href="./consumo_mensal.png">consumo mensal</a>
+												<br>- <a href="./cadastro.png">cadastro</a>
+												<br>- O login é feito escolhendo-se um número de apto no "dropdown".
+												Um login com um nº de apto só pode ver este apto. Um login com Síndico, pode ver todos aptos. No 2º ou 3º trabalho, o acesso será feito com HTTPS, nome de usuário e senha.
+												<br>- O consumo mensal deverá ler os dados da base de dados, que já estará preenchida. No 2º e 3º trabalho os dados serão realmente lidos de medidores (simulados) para preencher a base de dados. 
+												<br>- No 1º trabalho, só o Síndico poderá cadastrar aptos com nomes, telefones e email.
+												<br>Código das páginas (HTML e CSS, só): <a href="./consumodeaguaV1.rar">consumodeaguaV1.rar</a>
+												<br><span style="color:red;font-weight:bold;">Para o 1º trabalho, NÃO é necessário implementar as funções do síndico.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>22/set</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+												Atendimento de dúvidas e exemplos para o 1º Trabalho.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>25/set</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;font-weight:bold;">Apresentações do 1º Trabalho.</span>
+												<br><br>
+												<a href="./entrega.primeiro.trabalho.html">Lista de entrega do primeiro trabalho</a>
+												<br>
+												<br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>29/set</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">30/set: Último dia para trancamento de matrícula.</span><br>
+												Introdução a Javascript (ver <a href="./javascript_leao_2016_incompleto.pdf">javascript_leao_2016_incompleto.pdf</a>).
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td>02/out</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+											"Gabarito" (minha versão) do primeiro trabalho: 
+											<a href="./consumodeagua.rar">consumodeagua.rar</a><br>
+											Introdução a AJAX.<br>
+											Exemplo simples de AJAX, pedido GET, request url-encoded:<br> 
+											<a href="./ajaxBemSimples.rar">ajaxBemSimples.rar</a><br>
+											Exemplo de pedido AJAX POST, dados do request e da response em JSON:<br>
+											<a href="./ajaxComJSON.rar">ajaxComJSON.rar</a><br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>06/out</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>21</td>
+                                            <td>09/out</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+												<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./enunciado_segundo_trabalho.pdf"
+                                                   style="font-weight:bold;color:red;">Enunciado do segundo trabalho.pdf</a> (atualizado em 10/10/17)
+                                                <br>   
+                                                <br>
+												<a href="./consumodeagua.V2.sql">consumodeagua.V2.sql</a><br>
+												<a href="./modeloPaginaSegundoTrabalho.rar">modeloPaginaSegundoTrabalho.rar</a><br>
+												<a href="./Exemplo para o segundo trabalho de EEL418.pdf">Exemplo para o segundo trabalho de EEL418.pdf</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>22</td>
+                                            <td>13/out</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Recesso</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>23</td>
+                                            <td>16/out</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+											Dicas para o segundo trabalho.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>24</td>
+                                            <td>20/out</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+											Dicas para o segundo trabalho.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td>23/out</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Aula suspensa dvido à 8ª Semana de Integração Acadêmica (SIAC) da UFRJ.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><a name="DIARIO"></a>26</td>
+                                            <td>27/out</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+											Base de dados (<a href="./consumodeagua.com.dados.20171027.sql">consumodeagua.com.dados.20171027.sql</a>) para o Segundo Trabalho, com dados nos meses de JAN/2011 e FEV/2011.<br>
+											Classe (<a href="./LeiturasDAO.java">LeiturasDAO.java</a>) de acesso ao BD para incluir medidas e para ler medidas.<br>
+											DTO (<a href="./LeiturasDTO.java">LeiturasDTO.java</a>) para transferir e calcular valores de uma linha da tabela de medidas.<br>
+											Clip (<a href="./consumo.de.agua.mp4">consumo.de.agua.mp4</a>) de demostração do sistema funcionando.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>27</td>
+                                            <td>30/out</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;font-weight:bold;">Apresentações do 2º Trabalho.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>28</td>
+                                            <td>03/nov</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Recesso</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>29</td>
+                                            <td>06/nov</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+											</td>
+                                        </tr>
+                                        <tr>
+                                            <td>30</td>
+                                            <td>10/nov</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>31</td>
+                                            <td>13/nov</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>32</td>
+                                            <td>17/nov</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>33</td>
+                                            <td>20/nov</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Feriado: Dia da consciência negra.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>34</td>
+                                            <td>24/nov</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;">Falta de quorum.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>35</td>
+                                            <td>27/nov</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+												<a href="./Resumo_de_Criptografia.pdf">Resumo_de_Criptografia.pdf</a><br>
+												Instruções para configurar o HTTPS no Tomcat: <a href="./Tomcat_HTTPS.pdf">Tomcat_HTTPS.pdf</a><br>
+												<br>
+												Exemplo completo de projeto usando HTTPS e autenticação por form: 
+												<a href="./ExemploHTTPS_2017.rar">ExemploHTTPS_2017.rar</a> (observe os arquivos de dicas passo-a-passo e de backup da base de dados para a autenticação dentro do folder do projeto), atualizado uma segunda vez em 01/dez/17.<br>
+												<br>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="./enunciado_terceiro_trabalho.pdf"
+                                                   style="font-weight:bold;color:red;">Enunciado do terceiro trabalho.pdf</a> 
+                                                <br>   
+                                                <br>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>36</td>
+                                            <td>01/dez</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+												<span style="color:red;">Aula suspensa por falta de eletricidade.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>37</td>
+                                            <td>04/dez</td>
+                                            <td>2<sup>a</sup></td>
+                                            <td>
+											Demonstrações sobre o ExemploHTTPS_2017.rar.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>38</td>
+                                            <td>08/dez</td>
+                                            <td>6<sup>a</sup></td>
+                                            <td>
+                                                <span style="color:red;font-weight:bold;">Apresentações do 3º Trabalho.</span>    
+												<br><br>
+												<a href="./entrega.terceiro.trabalho.html">Lista de entrega do terceiro trabalho</a>
+												<br>
+												<br>
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="AVALIACAO"><b>3. Avaliação:</b></a>
+                                <br>
+                                Havendo consenso, a avaliação será feita com base em três trabalhos:
+                                <ul>
+                                    <li>Os trabalhos serão individuais.</li>
+                                    <li>O critério de nota é: quem atender aos requisitos mínimos do que foi pedido, sem acrescentar
+                                        nenhuma contribuição pessoal a mais, garante pelo menos uma nota 5,0.<br>
+                                        A nota deve refletir a qualidade do trabalho, assim como em um trabalho profissional.
+                                        O esforço pessoal para produzir um produto de qualidade é recompensado.</li>
+                                    <li>
+                                        O peso de cada trabalho poderá ser alterado no futuro mas, em princípio, os pesos são:<br>
+                                        P<sub>1</sub>=1,<br>
+                                        P<sub>2</sub>=1,<br>
+                                        P<sub>3</sub>=1.
+                                    </li>
+                                    <li>
+                                        <b>2ª chamada</b><br>
+                                        A entrega dos trabalhos após a data acertada implica em uma redução da nota
+                                        (proporcional ao atraso), até uma data limite (1 semana).<br>
+                                        Após este limite, o trabalho será considerado "Não entregue" e receberá nota zero e ela
+                                        será usada na média final.<br>
+                                        Contudo, a entrega após este prazo poderá ser feita como se fosse uma segunda chamada,
+                                        desde que justificada e acertada com o professor e sujeita a eventuais mudanças de escopo (e obviamente, o prazo).<br>
+                                        O pedido deste tipo de 2ª chamada não deverá ser feito após o encerramento do período.
+                                    </li>
+                                    <li><b>Ética, Plágio e "Cola":</b><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Nesta disciplina, quando falamos sobre "cola" estamos falando
+                                        de copiar programas, ou trechos de programas, de outros autores, sem dar o crédito
+                                        ou ter permissão.
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Ao contrário da tendência predominante nas boas universidades dos países desenvolvidos,
+                                        é comum na UFRJ adotar-se o critério de punir com um zero somente a avaliação afetada pela "cola".
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Isto significa dar zero em uma prova, se houve "cola" em qualquer parte desta,
+                                        ou zero em todo o trabalho se houve cópia ou plágio de qualquer trecho de um programa.
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        A tendência nas boas universidades no resto do mundo é punir, pelo menos,
+                                        com a <u>reprovação na disciplina</u>.<br>
+                                        Nesta disciplina, procuraremos seguir a tendência destas universidades.
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        A troca de idéias e informações entre os alunos,
+                                        com o professor e com outros profissionais é estimulada, desde que observadas
+                                        as condições a seguir.
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        As informações devem ser passadas verbalmente. Toda informação por escrito, de origem pessoal,
+                                        que não seja de acesso público e que possa ser usada em uma avaliação, em papel, quadro negro ou computador,
+                                        deve ficar restrita aos próprios autores. Papéis devem ser guardados pelos seus autores,
+                                        o quadro deve ser apagado e arquivos devem ficar com seus autores.
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Por outro lado, todos os exemplos que eu colocar na página podem ser usados livremente nos trabalhos.
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Os autores serão responsabilizados igualmente se seus escritos forem utilizados
+                                        por outros em "cola".
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        A pessoa que "cola" de um colega ou da Internet está tentando manipular as outras
+                                        pessoas e as regras do sistema para obter um resultado melhor do que os seus próprios
+                                        méritos eventualmente permitiriam que ela obtivesse. Isto é grave!
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Forneço abaixo alguns links que sugiro como leitura e nos quais me baseei
+                                        para escrever estas linhas.
+                                        <br>
+                                        <a href="http://pages.ucsd.edu/~dkjordan/resources/cheat.html">http://pages.ucsd.edu/~dkjordan/resources/cheat.html</a><br>
+                                        <a href="http://academicintegrity.ucsd.edu/process/consequences/index.html">http://academicintegrity.ucsd.edu/process/consequences/index.html</a><br>
+                                        <a href="http://academia.stackexchange.com/questions/30539/i-was-caught-cheating-on-an-exam-how-can-i-minimize-the-damage">http://academia.stackexchange.com/questions/30539/i-was-caught-cheating-on-an-exam-how-can-i-minimize-the-damage</a><br>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        E obviamente, as palavras atribuídas (erroneamente) a Bill Gates: <a href="https://www.se.rit.edu/~jrv/personal/RulesForStudents.html">https://www.se.rit.edu/~jrv/personal/RulesForStudents.html</a><br>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="NAULA"><b>4. Notas de aula <i>et alia</i>:</b></a>
+                                <ul>
+                                    <li>Versão em contínua atualização da <a href="./java21.pdf">apresentação</a> PowerPoint/PDF de JAVA <font color="#000000"><b>(atualizada para Java8 até o capítulo 3 em 21/mar/2015)</b></font>.
+                                    <li>Apresentação resumida de Javascript: <a href="./javascript_leao_2016_incompleto.pdf">javascript_leao_2016_incompleto.pdf</a>
+                                        <span style="color:black;font-weight:bold;">(Apresentação atualizada em 12/fev/2016)</span></li>
+                                    <li>Link para tutoriais de programação WEB: <a href="https://developer.mozilla.org/en-US/">https://developer.mozilla.org/en-US/</a>, visto em 28/02/2015.
+                                    <li>Link para "The JAVA Tutorials", em <a href="http://download.oracle.com/javase/tutorial/index.html">http://download.oracle.com/javase/tutorial/index.html</a>, visto em 28/02/2015.
+                                    <li>Link para "The JAVA Language Specification: Java SE 8 edition", em <a href="http://docs.oracle.com//javase//specs//jls//se8//jls8.pdf">http://docs.oracle.com/javase/specs/jls/se8/jls8.pdf</a>, visto em 28/02/2015.
+                                    <li>Link para "The JAVA Virtual Machine Specification: Java SE 8 edition", em <a href="http://docs.oracle.com//javase//specs//jvms//se8//jvms8.pdf">http://docs.oracle.com/javase/specs/jvms/se8/jvms8.pdf</a>, visto em 28/02/2015.
+                                    <li>Link para "The JAVA EE 7 Tutorial", em <a href="http://docs.oracle.com/javaee/7/JEETT.pdf">http://docs.oracle.com/javaee/7/JEETT.pdf</a>, visto em 28/02/2015.
+									<li>Link para "Java Platform, Enterprise Edition (Java EE) 7", que inclui "The JAVA EE 7 Tutorial",
+									em <a href="https://docs.oracle.com/javaee/7/index.html">https://docs.oracle.com/javaee/7/index.html</a>.
+                                    <li>Link para um livro gratuito sobre Maven: <a href="http://books.sonatype.com/mvnref-book/pdf/mvnref-pdf.pdf">"Maven: the complete reference"</a>, Tim O'Brien, Manfred Moser, John Casey, Brian Fox, Jason Van Zyl, Eric Redmond, Larry Shatzer.
+                                    <li>Link para a versão on-line, gratuita, de <a href="http://pdf.coreservlets.com/">Core Servlets and Java Server Pages</a> by Marty Hall and Larry Brown, 2005.</li>
+                                </ul>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a name="BIBLIO"><b>5. Bibliografia:</b></a>
+                                <br>
+                                <br>[BRO] Brown, Simon et alia - "Professional JSP", 2nd edition, Programmer to programmer,Wrox Press, 2001.
+                                <br>[COM] Comer, D.E.; Stevens, D.L. - "Internetworking with TCP/IP", vols. I, II e III, Prentice-Hall, 1991, 1991, 1993.
+                                <br>[CRO] Crockford, Douglas - "Javascript: the good parts", Yahoo! Inc., O'Reilly Media Inc., 2008.
+                                <br>[KUR] Budi Kurniawan - "Java for the Web with Servlets, JSP, and EJB: A Developer's Guide to J2EE Solutions",
+                                New Riders Publishing, April 12, 2002.
+                                <br>[RES] John Resig - "Secrets of the Javascript ninja", Manning Publications, 2009.
+                                <br>[STE] Stevens, W. Richard; Wright, Gary R. - "TCP/IP Illustrated (3 Volume Set)", Addison-Wesley, 2001.
+                                <br>[STO] Stoyan Stefanov - "Object-Oriented JavaScript: Create scalable, reusable high-quality JavaScript applications,and libraries", Packt Publishing, 2008.
+                                <br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <img src="footer-line-smaller.png" alt=""/>
+            </center>
+            <br><br>
+            <br><br>
+        </center>
+    </body>
+</html>
