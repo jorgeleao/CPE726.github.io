@@ -15,6 +15,7 @@ public class Main {
         classeQueExtendeThread_02 = new ClasseQueExtendeThread(2);
         classeQueExtendeThread_02.start();
         
+        
         classeQueImplementaRunnable_03 = new ClasseQueImplementaRunnable(3);
         t = new Thread(classeQueImplementaRunnable_03);
         t.start();

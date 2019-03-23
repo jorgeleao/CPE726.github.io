@@ -1,3 +1,0 @@
-exemploThreads01.ClasseQueExtendeThread
-exemploThreads01.ClasseQueImplementaRunnable
-exemploThreads01.Main
